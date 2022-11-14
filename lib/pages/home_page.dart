@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
         title: const Text("Hirend"),
       ),
       body: const Center(
-        child: Text("welcome to this universe"),
+        child: Text("Welcome to this universe"),
       ),
       drawer: const Drawer(),
     );
