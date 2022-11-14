@@ -9,8 +9,11 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Hirend"),
       ),
-      body: const Center(
-        child: Text("Welcome to this universe"),
+      body:  Center(
+        child: Column(children:const  [
+          Text("Welcome to this universe"),
+          Text('new text added')
+        ],),
       ),
       drawer: const Drawer(),
     );
