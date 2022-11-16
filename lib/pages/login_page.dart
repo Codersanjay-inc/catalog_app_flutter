@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/utilits/routes.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  String name = "";
   get onPressed => null;
 
   @override
@@ -20,9 +26,9 @@ class LoginPage extends StatelessWidget {
             const SizedBox(
               height: 20.0,
             ),
-            const Text(
-              "WELCOME",
-              style: TextStyle(
+            Text(
+              "WELCOME $name",
+              style: const TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
               ),
@@ -36,11 +42,14 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 children: [
                   TextFormField(
-                    decoration: const InputDecoration(
-                      hintText: "Enter Username",
-                      labelText: "User name",
-                    ),
-                  ),
+                      decoration: const InputDecoration(
+                        hintText: "Enter Username",
+                        labelText: "User name",
+                      ),
+                      onChanged: (value) {
+                        name = value;
+                        setState(() {});
+                      }),
                   TextFormField(
                     obscureText: true,
                     decoration: const InputDecoration(
