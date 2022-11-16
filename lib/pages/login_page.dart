@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/utilits/routes.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -60,8 +61,11 @@ class _LoginPageState extends State<LoginPage> {
                 height: 40.0,
               ),
               InkWell(
-                onTap: () {
-                  //Navigator.pushNamed(context, MyRoutes.HomeRoutes);
+                onTap: () async {
+                  //
+                  await Future.delayed(const Duration(seconds: 3));
+                  // ignore: use_build_context_synchronously
+                  Navigator.pushNamed(context, MyRoutes.HomeRoutes);
 
                   setState(() {
                     changeButton = true;
