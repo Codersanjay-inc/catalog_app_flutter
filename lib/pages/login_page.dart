@@ -75,18 +75,23 @@ class _LoginPageState extends State<LoginPage> {
                   decoration: BoxDecoration(
                       color: Colors.cyan,
                       borderRadius:
-                          BorderRadius.circular(changeButton ? 20 : 8)),
+                          BorderRadius.circular(changeButton ? 50 : 8)),
 
                   // ignore: avoid_print
                   //Navigator.pushNamed(context, MyRoutes.HomeRoutes);
 
-                  child: const Text(
-                    "Login",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18),
-                  ),
+                  child: changeButton
+                      ? const Icon(
+                          Icons.done,
+                          color: Colors.white,
+                        )
+                      : const Text(
+                          "Login",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                        ),
                 ),
               ),
             ]),
