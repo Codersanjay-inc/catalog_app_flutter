@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/utilits/routes.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -10,69 +9,90 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   String name = "";
+  late bool changeButton = false;
   get onPressed => null;
 
   @override
   Widget build(BuildContext context) {
     return Material(
-        color: Colors.white,
-        child: SingleChildScrollView(
-            child: Column(
-          children: [
-            Image.asset(
-              "assets/img/login.png",
-              fit: BoxFit.cover,
+      color: Colors.white,
+      child: SingleChildScrollView(
+          child: Column(
+        children: [
+          Image.asset(
+            "assets/img/login.png",
+            fit: BoxFit.cover,
+          ),
+          const SizedBox(
+            height: 20.0,
+          ),
+          Text(
+            "WELCOME $name",
+            style: const TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
             ),
-            const SizedBox(
-              height: 20.0,
-            ),
-            Text(
-              "WELCOME $name",
-              style: const TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(
-              height: 20.0,
-            ),
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
-              child: Column(
-                children: [
-                  TextFormField(
-                      decoration: const InputDecoration(
-                        hintText: "Enter Username",
-                        labelText: "User name",
-                      ),
-                      onChanged: (value) {
-                        name = value;
-                        setState(() {});
-                      }),
-                  TextFormField(
-                    obscureText: true,
-                    decoration: const InputDecoration(
-                      hintText: "Enter Password",
-                      labelText: "Password",
-                    ),
+          ),
+          const SizedBox(
+            height: 20.0,
+          ),
+          Padding(
+            padding:
+                const EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
+            child: Column(children: [
+              TextFormField(
+                  decoration: const InputDecoration(
+                    hintText: "Enter Username",
+                    labelText: "User name",
                   ),
-                  const SizedBox(
-                    height: 40.0,
-                  ),
-                  ElevatedButton(
-                    style:
-                        TextButton.styleFrom(minimumSize: const Size(150, 40)),
-                    onPressed: () {
-                      // ignore: avoid_print
-                      Navigator.pushNamed(context, MyRoutes.HomeRoutes);
-                    },
-                    child: const Text("Login"),
-                  )
-                ],
+                  onChanged: (value) {
+                    name = value;
+                    setState(() {});
+                  }),
+              TextFormField(
+                obscureText: true,
+                decoration: const InputDecoration(
+                  hintText: "Enter Password",
+                  labelText: "Password",
+                ),
               ),
-            )
-          ],
-        )));
+              const SizedBox(
+                height: 40.0,
+              ),
+              InkWell(
+                onTap: () {
+                  //Navigator.pushNamed(context, MyRoutes.HomeRoutes);
+
+                  setState(() {
+                    changeButton = true;
+                  });
+                },
+                child: AnimatedContainer(
+                  duration: const Duration(seconds: 1),
+                  width: changeButton ? 50 : 150,
+                  height: 50,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                      color: Colors.cyan,
+                      borderRadius:
+                          BorderRadius.circular(changeButton ? 20 : 8)),
+
+                  // ignore: avoid_print
+                  //Navigator.pushNamed(context, MyRoutes.HomeRoutes);
+
+                  child: const Text(
+                    "Login",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18),
+                  ),
+                ),
+              ),
+            ]),
+          )
+        ],
+      )),
+    );
   }
 }
