@@ -9,7 +9,8 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
         color: Colors.white,
-        child: Column(
+        child: SingleChildScrollView(
+            child: Column(
           children: [
             Image.asset(
               "assets/img/login.png",
@@ -61,6 +62,6 @@ class LoginPage extends StatelessWidget {
               ),
             )
           ],
-        ));
+        )));
   }
 }
