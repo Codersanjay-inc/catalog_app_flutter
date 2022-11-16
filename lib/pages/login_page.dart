@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
+  get onPressed => null;
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -44,6 +46,17 @@ class LoginPage extends StatelessWidget {
                       labelText: "Password",
                     ),
                   ),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  ElevatedButton(
+                    style: TextButton.styleFrom(),
+                    onPressed: () {
+                      // ignore: avoid_print
+                      print("login here");
+                    },
+                    child: const Text("Login"),
+                  )
                 ],
               ),
             )
