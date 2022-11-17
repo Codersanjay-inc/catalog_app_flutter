@@ -20,85 +20,53 @@ class _LoginPageState extends State<LoginPage> {
     return Material(
       color: Colors.white,
       child: SingleChildScrollView(
-          child: Form(
-            key: _formKey,
-            child: Column(
-        children: [
-          Image.asset(
-            "assets/img/hey.png",
-            fit: BoxFit.cover,
-          ),
-          const SizedBox(
-            height: 20.0,
-          ),
-          Text(
-            "Welcome $name",
-            style: const TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          const SizedBox(
-            height: 20.0,
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
-           // ignore: unnecessary_const
-            const child : Column(
-            children :[
-              TextFormField(decoration: InputDecoration(
-                hintText: "Enter Username",
-                labelText: "Uaername",
+        child: Form(
+          key: _formKey,
+          child: Column(
+            children: [
+              Image.asset(
+                "assets/img/hey.png",
+                fit: BoxFit.cover,
               ),
-              onChanged: (value) {
-                name = value;
-                setState(() {});
-              },)
-              TextFormField(decoration: InputDecoration(
-                hintText: "Enter Password",
-                labelText: "Password",
+              const SizedBox(
+                height: 20.0,
               ),
-              ),
-              SizedBox(
-                height: 40.0,
-              ),
-              Material(
-                color: Colors.cyan,
-                borderRadius: BorderRadius.circular(changeButton ? 50 : 8),
-                child: InkWell(
-                  onTap: () async{
-                    setState(() {
-                      changeButton = true;
-                    });
-                    await Future.delayed(const Duration(seconds: 3));
-                    // ignore: use_build_context_synchronously
-                    await Navigator.pushNamed(context, MyRoutes);
-                    setState(() {
-                      changeButton = false;
-                    });
-                  },
-                  child: AnimatedContainer(duration: Duration(seconds:1)),
-                  width : changeButton ? 50 : 150,
-                  height : 50,
-                  alignment : Alignment.center,
-                  child : changeButton ? Icon(color: Colors.white,)
-                  : Text ("Login",
-                  style: TextStyle(color: Colors.white,
+              Text(
+                "Welcome $name",
+                style: const TextStyle(
+                  fontSize: 22,
                   fontWeight: FontWeight.bold,
-                  fontSize : 18),
                 ),
               ),
+              const SizedBox(
+                height: 20.0,
               ),
-           ),
-  
+              Column(children: [
+                // ignore: prefer_const_constructors
+                TextFormField(
+                  // ignore: prefer_const_constructors
+                  decoration: InputDecoration(
+                    hintText: "Enter Username",
+                    labelText: "Uaername",
+                  ),
+                  onChanged: (value) {
+                    name = value;
+                    setState(() {});
+                  },
+                ),
+                TextFormField(
+                  decoration: const InputDecoration(
+                    hintText: "Enter Password",
+                    labelText: "Password",
+                  ),
+                ),
+                
+              ]),
             ],
-            ),
           ),
-        ],
+        ),
       ),
-      ),
-      ));
-    
+    );
   }
 
   get newMethod => child;
