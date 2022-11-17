@@ -9,11 +9,12 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Hirend"),
       ),
-      body:  Center(
-        child: Column(children:const  [
-          Text("Welcome to this universe"),
-          Text('new text added')
-        ],),
+      body: Center(
+        child: Column(
+          children: const [
+            Text("Welcome to this universe"),
+          ],
+        ),
       ),
       drawer: const Drawer(),
     );
