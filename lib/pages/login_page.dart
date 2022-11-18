@@ -70,7 +70,6 @@ class _LoginPageState extends State<LoginPage> {
                       if (value!.isEmpty) {
                         return "Username can not be empty";
                       }
-                      return "null";
                     },
                     onChanged: (value) {
                       name = value;
