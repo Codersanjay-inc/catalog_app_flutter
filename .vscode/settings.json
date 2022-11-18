@@ -1,0 +1,11 @@
+{
+    "explorer.confirmDelete": false,
+    "workbench.sideBar.location": "left",
+    "workbench.statusBar.visible": true,
+    "editor.fontFamily": "Consolas",
+    "editor.fontSize": 22,
+    "terminal.integrated.fontFamily": "Consolas",
+    "terminal.integrated.fontSize": 20,
+    "terminal.integrated.lineHeight":1,
+    "editor.tabSize": 2,
+    }
