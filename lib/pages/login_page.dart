@@ -35,30 +35,30 @@ class _LoginPageState extends State<LoginPage> {
     return Material(
       color: Colors.white,
       child: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Form(
-            key: _formKey,
-            child: Column(
-              children: [
-                Image.asset(
-                  "assets/img/hey.png",
-                  fit: BoxFit.cover,
+        child: Form(
+          key: _formKey,
+          child: Column(
+            children: [
+              Image.asset(
+                "assets/img/hey.png",
+                fit: BoxFit.cover,
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Text(
+                "Welcome $name",
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
                 ),
-                const SizedBox(
-                  height: 20.0,
-                ),
-                Text(
-                  "Welcome $name",
-                  style: const TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(
-                  height: 20.0,
-                ),
-                Column(children: [
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(children: [
                   // ignore: prefer_const_constructors
                   TextFormField(
                     // ignore: prefer_const_constructors
@@ -97,8 +97,7 @@ class _LoginPageState extends State<LoginPage> {
 
                   Material(
                     color: Colors.cyan,
-                    borderRadius:
-                        BorderRadius.circular(changeButton ? 50 : 8),
+                    borderRadius: BorderRadius.circular(changeButton ? 50 : 8),
                     child: InkWell(
                       onTap: () => moveToHome(context),
                       child: AnimatedContainer(
@@ -122,8 +121,8 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ]),
-              ],
-            ),
+              )
+            ],
           ),
         ),
       ),
