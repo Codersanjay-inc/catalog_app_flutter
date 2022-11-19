@@ -7,17 +7,16 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Hirend"),
-      ),
-      body: Center(
-        child: Column(
-          children: const [
-            Text("Welcome to this universe"),
-          ],
+        appBar: AppBar(
+          title: const Text("Hirend"),
         ),
-      ),
-      drawer: const MyDrawer(),
-    );
+        body: Center(
+          child: Column(
+            children: const [
+              Text("Welcome to this universe"),
+            ],
+          ),
+        ),
+        drawer: const MyDrawer());
   }
 }
