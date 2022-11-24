@@ -6,7 +6,7 @@ class CatalogModel {
       desc: "Apple iPhone 12th generation",
       price: 999,
       image:
-          "https://www.croma.com/apple-iphone-12-64gb-purple-/p/234252?utm_source=google&utm_medium=ps&utm_campaign=sok_pmax-high_aov&gclid=CjwKCAiApvebBhAvEiwAe7mHSBmnBF_BLbcyP6tdrtqoKVcpfFi0pNkllJ5gCBSGWYPWtHpGVFUzGxoC2AoQAvD_BwE",
+          "https://cellbuddy.in/buddy/wp-content/uploads/2022/10/12-Pro-Gold.png",
     )
   ];
 }
