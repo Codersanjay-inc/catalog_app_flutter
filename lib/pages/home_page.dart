@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/models/catalog.dart';
 import 'package:flutter_application_1/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
@@ -7,16 +8,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Catalog"),
-        ),
-        body: Center(
-          child: Column(
-            children: const [
-              Text("Welcome to this universe"),
-            ],
-          ),
-        ),
-        drawer: const MyDrawer());
+      appBar: AppBar(
+        title: const Text("Catalog"),
+      ),
+      body: ListView.builder(
+        itemCount: CatalogModel.items.length,
+        itemBuilder: (context, index) {
+          return ItemWidget(
+            item: CatalogModel.items[index],
+          );
+        },
+      ),
+      drawer: const MyDrawer(),
+    );
   }
 }
