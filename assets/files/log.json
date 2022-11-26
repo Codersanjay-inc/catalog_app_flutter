@@ -1,0 +1,102 @@
+{
+  "products" : [
+    {
+      "id" : 1,
+      "name" : "iphone 12 pro",
+      "desc" : "Apple iPhone 12th generation",
+      "price" : 999,
+      "image" : "https://cellbuddy.in/buddy/wp-content/uploads/2022/10/12-Pro-Gold.png"
+    },
+    {
+      "id" : 2,
+      "name" : "pixel 5",
+      "desc" : "it's google phone",
+      "price" : 1000,
+      "image" : " https://www.cashify.in/google-pixel-5-price-in-india"
+
+    },
+
+
+
+ {
+      "id" : 2,
+      "name" : "pixel 5",
+      "desc" : "it's google phone",
+      "price" : 1000,
+      "image" : " https://www.cashify.in/google-pixel-5-price-in-india"
+
+    },
+     {
+      "id" : 3,
+      "name" : "pixel 5",
+      "desc" : "it's google phone",
+      "price" : 1000,
+      "image" : " https://www.cashify.in/google-pixel-5-price-in-india"
+
+    },
+     {
+      "id" : 4,
+      "name" : "pixel 5",
+      "desc" : "it's google phone",
+      "price" : 1000,
+      "image" : " https://www.cashify.in/google-pixel-5-price-in-india"
+
+    },
+     {
+      "id" : 5,
+      "name" : "pixel 5",
+      "desc" : "it's google phone",
+      "price" : 1000,
+      "image" : " https://www.cashify.in/google-pixel-5-price-in-india"
+
+    },
+     {
+      "id" : 6,
+      "name" : "pixel 5",
+      "desc" : "it's google phone",
+      "price" : 1000,
+      "image" : " https://www.cashify.in/google-pixel-5-price-in-india"
+
+    },
+     {
+      "id" : 7,
+      "name" : "pixel 5",
+      "desc" : "it's google phone",
+      "price" : 1000,
+      "image" : " https://www.cashify.in/google-pixel-5-price-in-india"
+
+    },
+     {
+      "id" : 8,
+      "name" : "pixel 5",
+      "desc" : "it's google phone",
+      "price" : 1000,
+      "image" : " https://www.cashify.in/google-pixel-5-price-in-india"
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ]
+}
